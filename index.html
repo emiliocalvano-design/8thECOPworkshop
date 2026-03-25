@@ -25,7 +25,7 @@ header{height:auto;min-height:90px;padding:16px 0;background:#fff;border-bottom:
 .sponsor-sub{font-size:15px;font-weight:400;color:rgba(255,255,255,0.85);margin-top:10px;line-height:1.5}
 .content-wrap{max-width:calc(100% - 64px);margin:0 32px}
 .page-header{padding:24px 0 0}
-.page-header__title{font-family:var(--serif-font);font-size:49px;font-weight:700;text-align:center;margin-bottom:32px;line-height:1.2;color:#000}
+.page-header__title{font-family:var(--serif-font);font-size:46px;font-weight:700;text-align:center;margin-bottom:32px;line-height:1.15;color:#000}
 .share-row{text-align:center;margin-bottom:24px}
 .share-label{font-size:13px;color:#666;margin-right:8px;vertical-align:middle}
 .share-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#727374;color:#fff;margin:0 2px;text-decoration:none;vertical-align:middle}
@@ -33,8 +33,6 @@ header{height:auto;min-height:90px;padding:16px 0;background:#fff;border-bottom:
 .citation-info{border-top:1px solid #BFC0C1;border-bottom:1px solid #BFC0C1;margin:32px 0;padding:32px 16px;display:flex;flex-direction:column;align-items:center;gap:10px}
 .citation-item{font-size:16px;text-align:center;line-height:1.5}
 .citation-item strong{font-weight:700}
-.participants-link{color:var(--luiss-blue);font-size:15px;text-decoration:none;font-weight:500}
-.participants-link:hover{text-decoration:underline}
 .print-agenda-wrap{text-align:center;margin-bottom:5px}
 .print-link{color:var(--luiss-blue);font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
 .print-link:hover{text-decoration:underline}
@@ -43,10 +41,9 @@ header{height:auto;min-height:90px;padding:16px 0;background:#fff;border-bottom:
 .sponsor-banner h2{font-family:var(--serif-font);font-size:30px;font-weight:700;color:#fff;margin:0}
 .agenda{margin:0}
 .agenda-day{margin:48px 0}
-.agenda-day__title{font-family:var(--serif-font);font-size:24px;font-weight:700;text-align:center;margin-bottom:24px}
+.agenda-day__title{font-family:var(--serif-font);font-size:28px;font-weight:700;text-align:center;margin-bottom:24px;color:#003366;padding-bottom:12px;border-bottom:2px solid #003366}
 .session-header{font-size:16px;font-weight:700;color:#c0392b;margin:32px 0 12px 24px}
-.agenda-entry{margin:0 0 40px 24px}
-.entry-time{font-size:15px;color:#555;margin-bottom:4px;display:block}
+.agenda-entry{margin:0 0 32px 24px}
 .entry-title-wrapper{display:block;padding:0 0 5px}
 .paper-title{font-family:var(--serif-font);font-size:20px;font-weight:500;color:var(--luiss-blue);display:inline}
 .paper-title:hover{text-decoration:underline}
@@ -54,20 +51,18 @@ header{height:auto;min-height:90px;padding:16px 0;background:#fff;border-bottom:
 .author-row{display:block}
 .author-name{font-weight:600}
 .affiliation{color:#000}
-.break-entry{margin:0 0 20px 24px;font-size:18px;color:#000}
-.keynote-section{margin:0 0 40px 24px;background:#fffde7;border-left:4px solid #003366;padding:16px}
+.break-entry{margin:0 0 20px 24px;font-size:18px;color:#555;font-style:italic}
+.keynote-section{margin:0 0 32px 24px;background:#fffde7;border-left:4px solid #003366;padding:16px}
 .keynote-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#003366;margin-bottom:6px}
 .keynote-title{font-family:var(--serif-font);font-size:20px;font-weight:700;margin-bottom:6px;color:var(--luiss-blue);font-style:italic}
 .keynote-speaker{font-size:18px;color:#000;font-weight:600}
 .keynote-affil{font-size:16px;color:#555;font-weight:400}
-.keynote-time{font-size:15px;color:#555;margin-top:6px}
-.participants-section{border-top:2px solid #003366;padding:40px 0;margin:40px 0}
-.participants-title{font-family:var(--serif-font);font-size:28px;font-weight:700;margin-bottom:24px;color:#003366;text-align:center}
-.participants-grid{max-width:calc(100% - 64px);margin:0 32px}
-.participant-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
-.participant-cell{padding:8px 0;border-bottom:1px solid #f0f0f0}
-.participant-name{display:block;font-size:15px;font-weight:600;color:#000;line-height:1.3}
-.participant-affil{display:block;font-size:13px;color:#555;margin-top:2px;line-height:1.3}
+.participants-section{margin:48px 0;padding:32px 0;border-top:1px solid #BFC0C1}
+.participants-title{font-family:var(--serif-font);font-size:28px;font-weight:700;margin-bottom:24px;text-align:center}
+.participants-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 24px;max-width:900px;margin:0 auto}
+.participant-card{padding:12px 16px;border-left:3px solid #003366}
+.participant-name{font-weight:700;font-size:16px;color:#003366}
+.participant-affil{font-size:14px;color:#555;margin-top:2px}
 .related-section{border-top:1px solid #BFC0C1;padding:32px 0;margin-top:32px}
 .related-title{font-family:var(--serif-font);font-size:28px;font-weight:700;margin-bottom:24px}
 .related-row{display:flex;align-items:center;gap:16px;margin-bottom:16px;border-top:1px solid #444;padding-top:12px}
@@ -83,229 +78,260 @@ footer .footer-contact a{color:#fff}
 footer .footer-links{margin-top:32px;font-size:14px}
 footer .footer-links a{color:#fff;margin:0 8px}
 .back-to-top{position:fixed;bottom:24px;right:24px;background:var(--luiss-blue);color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;text-decoration:none;z-index:100}
-@media print{.back-to-top,.header-nav,.share-row{display:none}.sponsor-banner{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style>
 </head>
 <body>
 <header>
-<div class="header-inner">
-<div class="org-logos">
-<a href="https://erc.europa.eu" class="org-logo-link" title="ERC - European Research Council">
-<img src="LOGO_ERC.png" alt="European Research Council" class="org-logo-img erc-logo">
-</a>
-<div class="org-divider"></div>
-<a href="https://www.tse-fr.eu" class="org-logo-link" title="Toulouse School of Economics">
-<img src="tselogo2.png" alt="Toulouse School of Economics" class="org-logo-img tse-logo">
-</a>
-</div>
-<div class="header-nav">
-<button aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#003366" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
-<button aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#003366" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-</div>
-</div>
+  <div class="header-inner">
+    <div class="org-logos">
+      <a href="https://erc.europa.eu" class="org-logo-link" title="ERC">
+        <img src="LOGO_ERC.png" alt="European Research Council" class="org-logo-img erc-logo">
+      </a>
+      <div class="org-divider"></div>
+      <a href="https://www.tse-fr.eu" class="org-logo-link" title="Toulouse School of Economics">
+        <img src="tselogo2.png" alt="Toulouse School of Economics" class="org-logo-img tse-logo">
+      </a>
+    </div>
+    <div class="header-nav">
+      <button aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#003366" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+      <button aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#003366" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
 </header>
 <main>
-<div class="content-wrap">
-<div class="page-header">
-<h1 class="page-header__title">8th Economics of Platforms (ECOP) Workshop</h1>
-<div class="share-row">
-<span class="share-label">SHARE</span>
-<a class="share-btn" href="#" title="Share on X" aria-label="Share on X"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.745l7.73-8.835L1.254 2.25H8.08l4.26 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-<a class="share-btn" href="#" title="Share on LinkedIn" aria-label="Share on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-<a class="share-btn" href="#" title="Share via Email" aria-label="Share via Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
-<a class="share-btn" href="#" title="Copy link" aria-label="Copy link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
-</div>
-<div class="citation-info">
-<div class="citation-item"><strong>DATE</strong> TBD</div>
-<div class="citation-item"><strong>LOCATION</strong> Toulouse School of Economics, Toulouse, France</div>
-<div class="citation-item"><strong>SCIENTIFIC COMMITTEE</strong> Sandro Shelegia (Pompeu Fabra University), Bruno Jullien (TSE), Andrew Rhodes (TSE), &Ouml;zlem Bedre-Defolie (EUI), and Emilio Calvano (LUISS University)</div>
-<div class="citation-item"><strong>LOCAL ORGANISERS</strong> Bruno Jullien and Andrew Rhodes, Toulouse School of Economics</div>
-<div class="citation-item"><a href="#participants" class="participants-link" style="font-weight:bold;font-size:calc(1em + 1pt);">&#8595; List of Participants</a></div>
-</div>
-<div class="print-agenda-wrap">
-<a class="print-link" href="#" onclick="window.print();return false;"><svg class="print-icon" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Print agenda</a>
-</div>
-<div class="sponsor-banner">
-<h2>Funded by the European Research Council (ERC)</h2>
-<p class="sponsor-sub">Hosted by Toulouse School of Economics</p>
-</div>
-</div>
-<div class="agenda">
-<div class="agenda-day">
-<h3 class="agenda-day__title">Day 1 &mdash; Wednesday</h3>
-<div class="break-entry">9:40&ndash;10:10&nbsp;&nbsp;Registration and welcome</div>
-<div class="session-header">Session 1</div>
-<div class="agenda-entry">
-<span class="entry-time">10:10&ndash;11:00</span>
-<div class="entry-title-wrapper"><span class="paper-title">Selling on Recommender Platforms: Demand Boost versus Customer Migration</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Marcel Preuss</span><span class="affiliation">, Cornell University</span></div>
-<div class="author-row"><span class="affiliation">Joint with Heiko Karle and Markus Reisinger</span></div>
-</div>
-</div>
-<div class="break-entry">11:00&ndash;11:30&nbsp;&nbsp;Coffee break</div>
-<div class="session-header">Session 2</div>
-<div class="agenda-entry">
-<span class="entry-time">11:30&ndash;12:20</span>
-<div class="entry-title-wrapper"><span class="paper-title">To Bid or Not to Bid? Entry Bid Shading and Bias in Sponsored Search Auctions</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Anastasiia Parakhoniak</span><span class="affiliation">, Durham University Business School</span></div>
-</div>
-</div>
-<div class="agenda-entry">
-<span class="entry-time">12:20&ndash;13:10</span>
-<div class="entry-title-wrapper"><span class="paper-title">When Does Quality Beat Data? Gaining Momentum in Dynamic Platform Competition</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Sarit Markovich</span><span class="affiliation">, Northwestern University</span></div>
-<div class="author-row"><span class="affiliation">Joint with Hanna Halaburda and Yaron Yehezkel</span></div>
-</div>
-</div>
-<div class="break-entry">13:10&ndash;14:20&nbsp;&nbsp;Lunch</div>
-<div class="session-header">Session 3</div>
-<div class="agenda-entry">
-<span class="entry-time">14:20&ndash;15:10</span>
-<div class="entry-title-wrapper"><span class="paper-title">&ldquo;Frenemy&rdquo; of Two Giants: Amazon and Apple</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Muxin Li</span><span class="affiliation">, SIMIS, Fudan University</span></div>
-<div class="author-row"><span class="affiliation">Joint with Ksenia Shakhgildyan</span></div>
-</div>
-</div>
-<div class="agenda-entry">
-<span class="entry-time">15:10&ndash;16:00</span>
-<div class="entry-title-wrapper"><span class="paper-title">Ranking Algorithms and Equilibrium Prices</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Yufeng Huang</span><span class="affiliation">, University of Rochester</span></div>
-<div class="author-row"><span class="affiliation">Joint with Malika Korganbekova and Aliya Korganbekova</span></div>
-</div>
-</div>
-<div class="break-entry">16:00&ndash;16:30&nbsp;&nbsp;Coffee break</div>
-<div class="session-header">Session 4</div>
-<div class="agenda-entry">
-<span class="entry-time">16:30&ndash;17:20</span>
-<div class="entry-title-wrapper"><span class="paper-title">Algorithmic Attention and Content Creation on Social Media Platforms</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Fei Li</span><span class="affiliation">, University of North Carolina &ndash; Chapel Hill</span></div>
-<div class="author-row"><span class="affiliation">Joint with Yi Chen and Marcel Preuss</span></div>
-</div>
-</div>
-<div class="break-entry" style="font-style:italic;color:#c0392b;">20:30&nbsp;&nbsp;Conference Dinner</div>
-</div>
-<div class="agenda-day">
-<h3 class="agenda-day__title">Day 2 &mdash; Thursday</h3>
-<div class="session-header">Keynote Lecture</div>
-<div class="keynote-section">
-<div class="keynote-label">Keynote Talk</div>
-<div class="keynote-title">TBD</div>
-<div class="keynote-speaker">Jean Tirole<span class="keynote-affil">, Toulouse School of Economics</span></div>
-<div class="keynote-time">10:10&ndash;11:00</div>
-</div>
-<div class="break-entry">11:00&ndash;11:30&nbsp;&nbsp;Coffee break</div>
-<div class="session-header">Session 5</div>
-<div class="agenda-entry">
-<span class="entry-time">11:30&ndash;12:20</span>
-<div class="entry-title-wrapper"><span class="paper-title">Platform Tying and Its Effects</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Massimo Motta</span><span class="affiliation">, Universitat Pompeu Fabra &amp; CEPR</span></div>
-<div class="author-row"><span class="affiliation">Joint with Leonardo Madio and Fabio Manenti</span></div>
-</div>
-</div>
-<div class="agenda-entry">
-<span class="entry-time">12:20&ndash;13:10</span>
-<div class="entry-title-wrapper"><span class="paper-title">Overviews</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Nikhil Vellodi</span><span class="affiliation">, Paris School of Economics</span></div>
-<div class="author-row"><span class="affiliation">Joint with Erik Madsen</span></div>
-</div>
-</div>
-<div class="break-entry">13:10&ndash;14:20&nbsp;&nbsp;Lunch</div>
-<div class="session-header">Session 6</div>
-<div class="agenda-entry">
-<span class="entry-time">14:20&ndash;15:10</span>
-<div class="entry-title-wrapper"><span class="paper-title">Pricing and Investment by a Two-Sided Monopoly Platform</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Jos&eacute; L. Moraga-Gonz&aacute;lez</span><span class="affiliation">, Vrije Universiteit Amsterdam</span></div>
-<div class="author-row"><span class="affiliation">Joint with Evgenia Motchenkova and Long Hoang</span></div>
-</div>
-</div>
-<div class="agenda-entry">
-<span class="entry-time">15:10&ndash;16:00</span>
-<div class="entry-title-wrapper"><span class="paper-title">Privacy, Data Combination and Ecosystem Competition between Ad-Funded and Subscription-Funded Apps</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Doh-Shin Jeon</span><span class="affiliation">, Toulouse School of Economics</span></div>
-</div>
-</div>
-<div class="break-entry">16:00&ndash;16:30&nbsp;&nbsp;Coffee break</div>
-<div class="session-header">Session 7</div>
-<div class="agenda-entry">
-<span class="entry-time">16:30&ndash;17:20</span>
-<div class="entry-title-wrapper"><span class="paper-title">Endogenous Switching Costs</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Gary Biglaiser</span><span class="affiliation">, University of North Carolina &ndash; Chapel Hill</span></div>
-<div class="author-row"><span class="affiliation">Joint with Jacques Cr&eacute;mer</span></div>
-</div>
-</div>
-<div class="agenda-entry">
-<span class="entry-time">17:20&ndash;18:10</span>
-<div class="entry-title-wrapper"><span class="paper-title">Online Travel Agencies and Beyond: The Role of Sales Channels for Hotels and Consumers</span></div>
-<div class="paper-authors">
-<div class="author-row"><span class="author-name">Andrea Mantovani</span><span class="affiliation">, TBS Education, Toulouse</span></div>
-<div class="author-row"><span class="affiliation">Joint with Laura Lasio, Jack Ma, Carlo Reggiani, and Nestor Duch Brown</span></div>
-</div>
-</div>
-</div>
-</div>
-<div class="participants-section" id="participants">
-<h2 class="participants-title">List of Participants</h2>
-<div class="participants-grid">
-<div class="participant-row">
-<div class="participant-cell"><span class="participant-name">&Ouml;zlem Bedre-Defolie</span><span class="participant-affil">European University Institute</span></div>
-<div class="participant-cell"><span class="participant-name">Gary Biglaiser</span><span class="participant-affil">University of North Carolina &ndash; Chapel Hill</span></div>
-<div class="participant-cell"><span class="participant-name">Emilio Calvano</span><span class="participant-affil">LUISS University</span></div>
-</div>
-<div class="participant-row">
-<div class="participant-cell"><span class="participant-name">Yufeng Huang</span><span class="participant-affil">University of Rochester</span></div>
-<div class="participant-cell"><span class="participant-name">Doh-Shin Jeon</span><span class="participant-affil">Toulouse School of Economics</span></div>
-<div class="participant-cell"><span class="participant-name">Bruno Jullien</span><span class="participant-affil">Toulouse School of Economics</span></div>
-</div>
-<div class="participant-row">
-<div class="participant-cell"><span class="participant-name">Fei Li</span><span class="participant-affil">University of North Carolina &ndash; Chapel Hill</span></div>
-<div class="participant-cell"><span class="participant-name">Muxin Li</span><span class="participant-affil">SIMIS, Fudan University</span></div>
-<div class="participant-cell"><span class="participant-name">Andrea Mantovani</span><span class="participant-affil">TBS Education, Toulouse</span></div>
-</div>
-<div class="participant-row">
-<div class="participant-cell"><span class="participant-name">Sarit Markovich</span><span class="participant-affil">Northwestern University</span></div>
-<div class="participant-cell"><span class="participant-name">Jos&eacute; L. Moraga-Gonz&aacute;lez</span><span class="participant-affil">Vrije Universiteit Amsterdam</span></div>
-<div class="participant-cell"><span class="participant-name">Massimo Motta</span><span class="participant-affil">Universitat Pompeu Fabra &amp; CEPR</span></div>
-</div>
-<div class="participant-row">
-<div class="participant-cell"><span class="participant-name">Anastasiia Parakhoniak</span><span class="participant-affil">Durham University Business School</span></div>
-<div class="participant-cell"><span class="participant-name">Marcel Preuss</span><span class="participant-affil">Cornell University</span></div>
-<div class="participant-cell"><span class="participant-name">Andrew Rhodes</span><span class="participant-affil">Toulouse School of Economics</span></div>
-</div>
-<div class="participant-row">
-<div class="participant-cell"><span class="participant-name">Sandro Shelegia</span><span class="participant-affil">Pompeu Fabra University</span></div>
-<div class="participant-cell"><span class="participant-name">Jean Tirole</span><span class="participant-affil">Toulouse School of Economics</span></div>
-<div class="participant-cell"><span class="participant-name">Nikhil Vellodi</span><span class="participant-affil">Paris School of Economics</span></div>
-</div>
-</div>
-</div>
-<div class="related-section">
-<h2 class="related-title">Related</h2>
-<div class="related-row"><span class="related-row-label">HOST</span><a class="related-row-link" href="https://www.tse-fr.eu">Toulouse School of Economics</a></div>
-<div class="related-row"><span class="related-row-label">FUNDER</span><a class="related-row-link" href="https://erc.europa.eu">European Research Council (ERC)</a></div>
-</div>
-</div>
-<div class="subfooter">
-<div class="subfooter-inner">
-<h2>About the Workshop</h2>
-<p>The Economics of Platforms (ECOP) Workshop is an annual workshop focused on the economics of digital platforms. The 8th edition is hosted by the Toulouse School of Economics and funded by the European Research Council (ERC).</p>
-</div>
-</div>
+  <div class="content-wrap">
+    <div class="page-header">
+      <h1 class="page-header__title">8th Economics of Platforms<br>(ECOP) Workshop</h1>
+      <div class="share-row">
+        <span class="share-label">SHARE</span>
+        <a class="share-btn" href="#" title="Share on X" aria-label="Share on X"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.745l7.73-8.835L1.254 2.25H8.08l4.26 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a class="share-btn" href="#" title="Share on LinkedIn" aria-label="Share on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a class="share-btn" href="#" title="Share via Email" aria-label="Share via Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        <a class="share-btn" href="#" title="Copy link" aria-label="Copy link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+      </div>
+      <div class="citation-info">
+        <div class="citation-item"><strong>DATE</strong> June 9&ndash;10, 2026</div>
+        <div class="citation-item"><strong>LOCATION</strong> Toulouse School of Economics, Toulouse, France</div>
+        <div class="citation-item"><strong>SCIENTIFIC COMMITTEE</strong> &Ouml;zlem Bedre-Defolie (EUI), Emilio Calvano (LUISS), Bruno Jullien (TSE), Andrew Rhodes (TSE), Sandro Shelegia (Pompeu Fabra)</div>
+        <div class="citation-item"><strong>LOCAL ORGANISERS</strong> Bruno Jullien and Andrew Rhodes (Toulouse School of Economics)</div>
+      </div>
+      <div class="print-agenda-wrap">
+        <a class="print-link" href="#" onclick="window.print();return false;"><svg class="print-icon" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Print agenda</a>
+      </div>
+      <div class="sponsor-banner">
+        <h2>Funded by the European Research Council (ERC)</h2>
+        <p class="sponsor-sub">Hosted by the Toulouse School of Economics</p>
+      </div>
+    </div>
+    <div class="agenda">
+      <div class="agenda-day">
+        <h3 class="agenda-day__title">Day 1 &mdash; Wednesday, June 9, 2026</h3>
+        <div class="break-entry">09:40&ndash;10:10 &nbsp; Registration and Welcome</div>
+        <div class="session-header">Session 1 &nbsp;&bull;&nbsp; 10:10&ndash;11:00</div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">Selling on Recommender Platforms: Demand Boost versus Customer Migration</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Marcel Preuss</span><span class="affiliation">, Cornell University</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Heiko Karle and Markus Reisinger</span></div>
+          </div>
+        </div>
+        <div class="break-entry">11:00&ndash;11:30 &nbsp; Coffee Break</div>
+        <div class="session-header">Session 2 &nbsp;&bull;&nbsp; 11:30&ndash;13:10</div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">To Bid or Not to Bid? Entry Bid Shading and Bias in Sponsored Search Auctions</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Anastasiia Parakhoniak</span><span class="affiliation">, Durham University Business School</span></div>
+          </div>
+        </div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">When Does Quality Beat Data? Gaining Momentum in Dynamic Platform Competition</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Sarit Markovich</span><span class="affiliation">, Northwestern University</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Hanna Halaburda and Yaron Yehezkel</span></div>
+          </div>
+        </div>
+        <div class="break-entry">13:10&ndash;14:20 &nbsp; Lunch</div>
+        <div class="session-header">Session 3 &nbsp;&bull;&nbsp; 14:20&ndash;16:00</div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">&ldquo;Frenemy&rdquo; of Two Giants: Amazon and Apple</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Muxin Li</span><span class="affiliation">, SIMIS, Fudan University</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Ksenia Shakhgildyan</span></div>
+          </div>
+        </div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">Ranking Algorithms and Equilibrium Prices</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Yufeng Huang</span><span class="affiliation">, University of Rochester</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Malika Korganbekova and Aliya Korganbekova</span></div>
+          </div>
+        </div>
+        <div class="break-entry">16:00&ndash;16:30 &nbsp; Coffee Break</div>
+        <div class="session-header">Session 4 &nbsp;&bull;&nbsp; 16:30&ndash;17:20</div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">Pricing and Investment by a Two-Sided Monopoly Platform</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Jos&eacute; L. Moraga-Gonz&aacute;lez</span><span class="affiliation">, Vrije Universiteit Amsterdam</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Evgenia Motchenkova and Long Hoang</span></div>
+          </div>
+        </div>
+        <div class="break-entry">20:30 &nbsp; Conference Dinner</div>
+      </div>
+      <div class="agenda-day">
+        <h3 class="agenda-day__title">Day 2 &mdash; Thursday, June 10, 2026</h3>
+        <div class="session-header">Keynote Lecture &nbsp;&bull;&nbsp; 10:10&ndash;11:00</div>
+        <div class="keynote-section">
+          <div class="keynote-label">Keynote Speaker</div>
+          <div class="keynote-title">TBD</div>
+          <div class="keynote-speaker">Jean Tirole<span class="keynote-affil">, Toulouse School of Economics</span></div>
+        </div>
+        <div class="break-entry">11:00&ndash;11:30 &nbsp; Coffee Break</div>
+        <div class="session-header">Session 5 &nbsp;&bull;&nbsp; 11:30&ndash;13:10</div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">Platform Tying and Its Effects</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Massimo Motta</span><span class="affiliation">, Universitat Pompeu Fabra</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Leonardo Madio and Fabio Manenti</span></div>
+          </div>
+        </div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">Overviews</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Nikhil Vellodi</span><span class="affiliation">, Paris School of Economics</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Erik Madsen</span></div>
+          </div>
+        </div>
+        <div class="break-entry">13:10&ndash;14:20 &nbsp; Lunch</div>
+        <div class="session-header">Session 6 &nbsp;&bull;&nbsp; 14:20&ndash;16:00</div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">Privacy, Data Combination and Ecosystem Competition between Ad-Funded Apps and Subscription-Funded Apps</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Doh-Shin Jeon</span><span class="affiliation">, Toulouse School of Economics</span></div>
+          </div>
+        </div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">Algorithmic Attention and Content Creation on Social Media Platforms</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Fei Li</span><span class="affiliation">, University of North Carolina &ndash; Chapel Hill</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Yi Chen and Marcel Preuss</span></div>
+          </div>
+        </div>
+        <div class="break-entry">16:00&ndash;16:30 &nbsp; Coffee Break</div>
+        <div class="session-header">Session 7 &nbsp;&bull;&nbsp; 16:30&ndash;18:10</div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">Endogenous Switching Costs</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Gary Biglaiser</span><span class="affiliation">, University of North Carolina &ndash; Chapel Hill</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Jacques Cr&eacute;mer</span></div>
+          </div>
+        </div>
+        <div class="agenda-entry">
+          <div class="entry-title-wrapper"><span class="paper-title">Online Travel Agencies and Beyond: The Role of Sales Channels for Hotels and Consumers</span></div>
+          <div class="paper-authors">
+            <div class="author-row"><span class="author-name">Andrea Mantovani</span><span class="affiliation">, TBS Education, Toulouse</span></div>
+            <div class="author-row"><span class="affiliation">Joint with Laura Lasio, Jack Ma, Carlo Reggiani, and Nestor Duch Brown</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="participants-section">
+      <h2 class="participants-title">List of Participants</h2>
+      <div class="participants-grid">
+        <div class="participant-card">
+          <div class="participant-name">&Ouml;zlem Bedre-Defolie</div>
+          <div class="participant-affil">European University Institute</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Gary Biglaiser</div>
+          <div class="participant-affil">University of North Carolina &ndash; Chapel Hill</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Michela Bonani</div>
+          <div class="participant-affil">Pompeu Fabra University</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Emilio Calvano</div>
+          <div class="participant-affil">LUISS University</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Yufeng Huang</div>
+          <div class="participant-affil">University of Rochester</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Doh-Shin Jeon</div>
+          <div class="participant-affil">Toulouse School of Economics</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Bruno Jullien</div>
+          <div class="participant-affil">Toulouse School of Economics</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Fei Li</div>
+          <div class="participant-affil">University of North Carolina &ndash; Chapel Hill</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Muxin Li</div>
+          <div class="participant-affil">SIMIS, Fudan University</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Andrea Mantovani</div>
+          <div class="participant-affil">TBS Education, Toulouse</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Sarit Markovich</div>
+          <div class="participant-affil">Northwestern University</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Jos&eacute; L. Moraga-Gonz&aacute;lez</div>
+          <div class="participant-affil">Vrije Universiteit Amsterdam</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Massimo Motta</div>
+          <div class="participant-affil">Universitat Pompeu Fabra</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Anastasiia Parakhoniak</div>
+          <div class="participant-affil">Durham University Business School</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Marcel Preuss</div>
+          <div class="participant-affil">Cornell University</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Andrew Rhodes</div>
+          <div class="participant-affil">Toulouse School of Economics</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Sandro Shelegia</div>
+          <div class="participant-affil">Pompeu Fabra University</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Jean Tirole</div>
+          <div class="participant-affil">Toulouse School of Economics</div>
+        </div>
+        <div class="participant-card">
+          <div class="participant-name">Nikhil Vellodi</div>
+          <div class="participant-affil">Paris School of Economics</div>
+        </div>
+      </div>
+    </div>
+    <div class="related-section">
+      <h2 class="related-title">Related</h2>
+      <div class="related-row"><span class="related-row-label">HOST</span><a class="related-row-link" href="https://www.tse-fr.eu">Toulouse School of Economics</a></div>
+      <div class="related-row"><span class="related-row-label">FUNDER</span><a class="related-row-link" href="https://erc.europa.eu">European Research Council (ERC)</a></div>
+    </div>
+  </div>
+  <div class="subfooter">
+    <div class="subfooter-inner">
+      <h2>About the Workshop</h2>
+      <p>The 8th Economics of Platforms (ECOP) Workshop is hosted by the Toulouse School of Economics and funded by the European Research Council (ERC). It brings together leading researchers working on the economics of digital platforms, marketplaces, and related topics.</p>
+    </div>
+  </div>
 </main>
 <footer>
-<div class="footer-org">Toulouse School of Economics &mdash; Toulouse, France</div>
-<div class="footer-contact"><p><a href="https://www.tse-fr.eu">www.tse-fr.eu</a></p><p>1 Esplanade de l&rsquo;Universit&eacute;<br>31080 Toulouse, France</p></div>
-<div class="footer-links"><a href="https://erc.europa.eu">ERC</a>&nbsp;&nbsp;<a href="https://www.tse-fr.eu">TSE</a></div>
+  <div class="footer-org">Toulouse School of Economics &mdash; Toulouse, France</div>
+  <div class="footer-contact"><p><a href="https://www.tse-fr.eu">www.tse-fr.eu</a></p><p>1 Esplanade de l&rsquo;Universit&eacute;<br>31080 Toulouse, France</p></div>
+  <div class="footer-links"><a href="https://erc.europa.eu">ERC</a><a href="https://www.tse-fr.eu">TSE</a></div>
 </footer>
 <a class="back-to-top" href="#" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">&#8593;</a>
 </body>
